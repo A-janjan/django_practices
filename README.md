@@ -1,1 +1,1 @@
-# django_practices
+# My Personal Django Projects
