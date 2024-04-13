@@ -1,0 +1,13 @@
+# Ignore compiled files
+*.pyc
+*.class
+
+# Ignore logs
+*.log
+
+# Ignore virtual environment directory
+learnix/env/
+
+# Ignore sensitive information
+secret.txt
+
