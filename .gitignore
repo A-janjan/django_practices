@@ -7,7 +7,9 @@
 
 # Ignore virtual environment directory
 learnix/env/
+learnix/learnix/courses/fixtures/
 
 # Ignore sensitive information
 secret.txt
+learnix/learnix/db.sqlite3
 
