@@ -9,18 +9,31 @@ e-commerce website
 
 ![app ui 1](docs/app_ui.png)
 
+---
+
 ![app ui 2](docs/app_ui2.png)
+
+---
 
 ![app ui 3](docs/app_ui3.png)
 
+---
+
 ![app ui 4](docs/app_ui4.png)
+
+---
 
 ![app ui 5](docs/app_ui5.png)
 
+---
+
 ![app ui 6](docs/app_ui6.png)
+
+---
 
 ![app ui 7](docs/app_ui7.png)
 
+---
 
 ## some commands
 
