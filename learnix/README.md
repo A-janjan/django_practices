@@ -21,3 +21,8 @@ or for Redis:
 consuming api example:
 
 `curl http://127.0.0.1:8000/api/subjects/ | json_pp`
+
+
+for enrolling:
+
+`curl -i -X POST -u student:password http://127.0.0.1:8000/api/courses/1/enroll/`
