@@ -9,7 +9,10 @@
 learnix/env/
 learnix/learnix/courses/fixtures/
 learnix/learnix/media/
+learnix/learnix/static/
+learnix/data/
 
 # Ignore sensitive information
 secret.txt
 learnix/learnix/db.sqlite3
+

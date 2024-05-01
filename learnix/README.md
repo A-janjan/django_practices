@@ -27,6 +27,23 @@ for enrolling:
 
 `curl -i -X POST -u student:password http://127.0.0.1:8000/api/courses/1/enroll/`
 
+specify settings:
+
+`python manage.py runserver --settings=learnix.settings.local`
+
+The command docker compose exec allows you to execute commands in the container. example:
+
+`sudo docker compose exec web python /code/learnix/manage.py migrate`
+and:
+`docker compose exec web python /code/educa/manage.py createsuperuser`
+
+check for production deployment:
+
+`python manage.py check --deploy --settings=learnix.settings.prod`
+
+generate SSL/TLS certificate:
+
+`openssl req -x509 -newkey rsa:2048 -sha256 -days 3650 -nodes -keyout learnix.key -out learnix.crt -subj '/CN=*.learnix.com' -addext 'subjectAltName=DNS:*.learnix.com'`
 
 ## some important tips
 
@@ -38,6 +55,9 @@ django Channels request/response cycle:
 
 ![django channels req/res cycle](docs/django_channels_cycle.png)
 
+The production environment request/response cycle:
+
+![ prod req/rest cycle ](docs/prod_req_cycle.png)
 
 
 ## some UI
