@@ -26,3 +26,31 @@ consuming api example:
 for enrolling:
 
 `curl -i -X POST -u student:password http://127.0.0.1:8000/api/courses/1/enroll/`
+
+
+## some important tips
+
+django request/response cycle:
+
+![django req/res cycle](docs/django_cycle.png)
+
+django Channels request/response cycle:
+
+![django channels req/res cycle](docs/django_channels_cycle.png)
+
+
+
+## some UI
+
+
+![ui1](docs/ui1.png)
+
+---
+
+![ui2](docs/ui2.png)
+
+---
+
+![ui3](docs/ui3.png)
+
+---
