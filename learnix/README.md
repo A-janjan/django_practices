@@ -45,6 +45,11 @@ generate SSL/TLS certificate:
 
 `openssl req -x509 -newkey rsa:2048 -sha256 -days 3650 -nodes -keyout learnix.key -out learnix.crt -subj '/CN=*.learnix.com' -addext 'subjectAltName=DNS:*.learnix.com'`
 
+executing management command(send emails for enrolling):
+
+`docker compose exec web python /code/learnix/manage.py \ enroll_reminder --days=20 --settings=learnix.settings.prod`
+
+
 ## some important tips
 
 django request/response cycle:
@@ -58,6 +63,10 @@ django Channels request/response cycle:
 The production environment request/response cycle:
 
 ![ prod req/rest cycle ](docs/prod_req_cycle.png)
+
+more detail:
+
+![production cycle](docs/production_cycle.png)
 
 
 ## some UI
@@ -74,3 +83,5 @@ The production environment request/response cycle:
 ![ui3](docs/ui3.png)
 
 ---
+
+thanks to [Antonio Melé](https://github.com/zenx)

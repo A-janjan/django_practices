@@ -57,6 +57,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "courses.middleware.subdomain_course_middleware"
 ]
 
 ROOT_URLCONF = "learnix.urls"
@@ -164,3 +165,6 @@ CHANNEL_LAYERS = {
 }
 
 STATIC_ROOT = BASE_DIR / 'static'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

@@ -9,8 +9,7 @@ ADMINS = [
     ('davinci', 'davinci@email.com'),
 ]
 
-ALLOWED_HOSTS = ['*']
-# 'learnix.com' , 'wwww.learnix.com'
+ALLOWED_HOSTS = ['.learnix.com']
 
 
 DATABASES = {

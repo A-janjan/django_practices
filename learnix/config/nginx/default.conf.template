@@ -11,7 +11,7 @@ upstream daphne {
 
 server {
     listen 80;
-    server_name www.learnix.com learnix.com;
+    server_name *.learnix.com learnix.com;
     return 301 https://$host$request_uri;
 }
 
@@ -26,6 +26,14 @@ server {
     location / {
         include     /etc/nginx/uwsgi_params;
         uwsgi_pass  uwsgi_app;
+    }
+
+    location /ws/ {
+        proxy_http_version  1.1;
+        proxy_set_header    Upgrade $http_upgrade;
+        proxy_set_header    Connection "upgrade";
+        proxy_redirect      off;
+        proxy_pass          http://daphne;
     }
 
     location /static/ {
