@@ -11,8 +11,9 @@ learnix/learnix/courses/fixtures/
 learnix/learnix/media/
 learnix/learnix/static/
 learnix/data/
+postagram/django-api/venv/
 
 # Ignore sensitive information
 secret.txt
 learnix/learnix/db.sqlite3
-
+postagram/django-api/db.sqlite3
