@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import { Form, Button } from "react-bootstrap";
 
 import { useUserActions } from "../../hooks/user.actions";
 
 function LoginForm() {
   const [validated, setValidated] = useState(false);
   const [form, setForm] = useState({
-    username: "",
+    email: "",
     password: "",
   });
   const [error, setError] = useState(null);
@@ -24,7 +23,7 @@ function LoginForm() {
     setValidated(true);
 
     const data = {
-      username: form.username,
+      email: form.email,
       password: form.password,
     };
 
@@ -44,16 +43,16 @@ function LoginForm() {
       onSubmit={handleSubmit}
     >
       <Form.Group className="mb-3">
-        <Form.Label>Username</Form.Label>
+        <Form.Label>Email</Form.Label>
         <Form.Control
-          value={form.username}
-          onChange={(e) => setForm({ ...form, username: e.target.value })}
+          value={form.email}
+          onChange={(e) => setForm({ ...form, email: e.target.value })}
           required
-          type="text"
-          placeholder="Enter username"
+          type="email"
+          placeholder="Enter Email"
         />
         <Form.Control.Feedback type="invalid">
-          This file is required.
+          This field is required.
         </Form.Control.Feedback>
       </Form.Group>
 
