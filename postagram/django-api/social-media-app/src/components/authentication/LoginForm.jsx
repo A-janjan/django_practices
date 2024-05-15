@@ -6,7 +6,7 @@ import { useUserActions } from "../../hooks/user.actions";
 function LoginForm() {
   const [validated, setValidated] = useState(false);
   const [form, setForm] = useState({
-    email: "",
+    username: "",
     password: "",
   });
   const [error, setError] = useState(null);
@@ -23,7 +23,7 @@ function LoginForm() {
     setValidated(true);
 
     const data = {
-      email: form.email,
+      username: form.username,
       password: form.password,
     };
 
@@ -43,13 +43,13 @@ function LoginForm() {
       onSubmit={handleSubmit}
     >
       <Form.Group className="mb-3">
-        <Form.Label>Email</Form.Label>
+        <Form.Label>Username</Form.Label>
         <Form.Control
-          value={form.email}
-          onChange={(e) => setForm({ ...form, email: e.target.value })}
+          value={form.username}
+          onChange={(e) => setForm({ ...form, username: e.target.value })}
           required
-          type="email"
-          placeholder="Enter Email"
+          type="text"
+          placeholder="Enter Username"
         />
         <Form.Control.Feedback type="invalid">
           This field is required.
