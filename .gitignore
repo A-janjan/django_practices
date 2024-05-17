@@ -12,6 +12,7 @@ learnix/learnix/media/
 learnix/learnix/static/
 learnix/data/
 postagram/django-api/venv/
+postagram/django-api/uploads/
 
 # Ignore sensitive information
 secret.txt
