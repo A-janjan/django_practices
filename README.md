@@ -1,4 +1,4 @@
-# My Small Django Projects
+# My Small-Scale Django Projects
 
 
 
